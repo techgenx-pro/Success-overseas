@@ -38,13 +38,6 @@ use PHPMailer\PHPMailer\PHPMailer;
         // Build the email headers.
         $email_headers = "From: $name <$email>";
         
-        //SMTP Function----------------------
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp@gmail.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'successoverseassikar@gmail.com';                 // SMTP username
-$mail->Password = '&_991400';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             http_response_code(200);
